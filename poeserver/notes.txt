@@ -1,0 +1,11 @@
+Admin user not loggin in, username or password wrong:
+    python manage.py createsuperuser
+CSS not applied, static files (eg. css) not served: 
+    python manage.py collectstatic --no-input --clear
+Logging into Admin gives ProgrammingError at /admin/login/ - relation "auth_user" does not exist: 
+    python manage.py flush --no-input
+    python manage.py migrate
+[PROD] Failed to build psycopg2-binary after adding venv
+    Add pip install wheel before pip wheel --no-cache0dir etc.
+WARNING: The directory '/home/app/.cache/pip' or its parent directory is not owned or is not writable by the current user.:
+    Activate virtual environment before pip install
