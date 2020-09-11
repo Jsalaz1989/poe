@@ -20,6 +20,11 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev
 
+# install cryptography dependencies
+RUN apk add --no-cache \
+        libressl-dev \
+        libffi-dev
+
 # lint
 RUN pip install --upgrade pip && pip install flake8
 COPY . .

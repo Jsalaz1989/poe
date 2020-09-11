@@ -17,6 +17,11 @@ ENV PYTHONUNBUFFERED 1
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev
 
+# install cryptography dependencies
+RUN apk add --no-cache \
+        libressl-dev \
+        libffi-dev
+
 # install dependencies
 COPY ./requirements.txt .
 COPY ./django-polls-0.1.tar.gz .

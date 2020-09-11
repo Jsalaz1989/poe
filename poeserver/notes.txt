@@ -8,4 +8,6 @@ Logging into Admin gives ProgrammingError at /admin/login/ - relation "auth_user
 [PROD] Failed to build psycopg2-binary after adding venv
     Add pip install wheel before pip wheel --no-cache0dir etc.
 WARNING: The directory '/home/app/.cache/pip' or its parent directory is not owned or is not writable by the current user.:
-    Activate virtual environment before pip install
+    Activate virtual environment before pip install (not sure if this is really the solution)
+Pip not installing from wheel - invalid command bdist_wheel:
+    pip install wheel before
